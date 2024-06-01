@@ -18,7 +18,7 @@ public class ParticleDisplay_19 extends ParticleDisplay_17 {
 	public void display(Particle particle, ParticleOptions options, Location center, double range, List<Player> targetPlayers) {
 		// Legacy colorizeable particles
 		if (options.color != null && (particle == Particle.ENTITY_EFFECT)) {
-			displayLegacyColored(particle, options, center, range, targetPlayers);
+			displayColor(particle, options, center, range, targetPlayers);
 			return;
 		}
 

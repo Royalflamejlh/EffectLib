@@ -63,6 +63,16 @@ public abstract class ParticleDisplay {
         spawnParticle(particle, options, center, range, targetPlayers);
     }
 
+
+    @SuppressWarnings({"deprecation"})
+    protected void displayColor(Particle particle, ParticleOptions options, Location center, double range, List<Player> targetPlayers) {
+        Color color = options.color;
+        if (color == null) color = Color.RED;
+
+        options.data = color;
+        spawnParticle(particle, options, center, range, targetPlayers);
+    }
+
     protected void displayLegacyColored(Particle particle, ParticleOptions options, Location center, double range, List<Player> targetPlayers) {
         // Colored particles can't have a speed of 0.
         Color color = options.color;
