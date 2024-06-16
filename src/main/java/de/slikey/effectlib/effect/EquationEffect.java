@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.util.Vector;
@@ -94,7 +95,7 @@ public class EquationEffect extends Effect {
     public EquationEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.DUST;
+        particle = XParticle.DUST.get();
         period = 1;
         iterations = 100;
     }

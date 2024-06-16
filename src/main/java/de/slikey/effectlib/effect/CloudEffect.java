@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -23,7 +24,7 @@ public class CloudEffect extends Effect {
     /**
      * Particle of the rain/snow
      */
-    public Particle mainParticle = Particle.DRIPPING_WATER;
+    public Particle mainParticle = XParticle.DRIPPING_WATER.get();
     public int mainParticles = 15;
 
     /**

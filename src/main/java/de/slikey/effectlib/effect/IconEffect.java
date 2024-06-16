@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Particle;
 import org.bukkit.Location;
 
@@ -14,7 +15,7 @@ public class IconEffect extends Effect {
     public IconEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.ANGRY_VILLAGER;
+        particle = XParticle.ANGRY_VILLAGER.get();
         period = 4;
         iterations = 25;
     }

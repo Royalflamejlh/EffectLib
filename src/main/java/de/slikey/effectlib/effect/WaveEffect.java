@@ -3,6 +3,7 @@ package de.slikey.effectlib.effect;
 import java.util.HashSet;
 import java.util.Collection;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -16,7 +17,7 @@ import de.slikey.effectlib.util.VectorUtils;
 
 public class WaveEffect extends Effect {
 
-    public Particle mainParticle = Particle.DRIPPING_WATER;
+    public Particle mainParticle = XParticle.DRIPPING_WATER.get();
     public Particle cloudParticle = Particle.CLOUD;
     public Color cloudColor = null;
 

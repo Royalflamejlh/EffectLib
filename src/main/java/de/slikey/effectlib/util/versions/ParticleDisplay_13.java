@@ -2,6 +2,7 @@ package de.slikey.effectlib.util.versions;
 
 import java.util.List;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Location;
@@ -18,17 +19,17 @@ public class ParticleDisplay_13 extends ParticleDisplay {
     @Override
     public void display(Particle particle, ParticleOptions options, Location center, double range, List<Player> targetPlayers) {
         // Legacy colorizeable particles
-        if (options.color != null && (particle == Particle.ENTITY_EFFECT)) {
+        if (options.color != null && (particle == XParticle.ENTITY_EFFECT.get())) {
             displayLegacyColored(particle, options, center, range, targetPlayers);
             return;
         }
 
-        if (particle == Particle.ITEM) {
+        if (particle == XParticle.ITEM.get()) {
             displayItem(particle, options, center, range, targetPlayers);
             return;
         }
 
-        if (particle == Particle.BLOCK || particle == Particle.FALLING_DUST) {
+        if (particle == XParticle.BLOCK.get() || particle == XParticle.FALLING_DUST.get()) {
             Material material = options.material;
             if (material == null || material.name().contains("AIR")) return;
             try {
@@ -39,7 +40,7 @@ public class ParticleDisplay_13 extends ParticleDisplay {
             if (options.data == null) return;
         }
 
-        if (particle == Particle.DUST) {
+        if (particle == XParticle.DUST.get()) {
             // color is required for 1.13
             if (options.color == null) options.color = Color.RED;
             options.data = new Particle.DustOptions(options.color, options.size);

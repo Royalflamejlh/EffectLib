@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Particle;
 import org.bukkit.Location;
 import org.bukkit.util.Vector;
@@ -56,7 +57,7 @@ public class AnimatedBallEffect extends Effect {
     public AnimatedBallEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.WITCH;
+        particle = XParticle.WITCH.get();
         iterations = 500;
         period = 1;
     }

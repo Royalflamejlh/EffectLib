@@ -3,6 +3,7 @@ package de.slikey.effectlib.util;
 import java.io.File;
 import java.awt.image.BufferedImage;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.util.Vector;
@@ -109,7 +110,7 @@ public abstract class BaseImageEffect extends Effect {
     public BaseImageEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.DUST;
+        particle = XParticle.DUST.get();
         period = 2;
         iterations = 200;
     }

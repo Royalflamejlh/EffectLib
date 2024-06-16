@@ -2,6 +2,7 @@ package de.slikey.effectlib.util.versions;
 
 import java.util.List;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -17,17 +18,17 @@ public class ParticleDisplay_17 extends ParticleDisplay_13 {
     @Override
     public void display(Particle particle, ParticleOptions options, Location center, double range, List<Player> targetPlayers) {
         // Legacy colorizeable particles
-        if (options.color != null && (particle == Particle.ENTITY_EFFECT)) {
+        if (options.color != null && (particle == XParticle.ENTITY_EFFECT.get())) {
             displayLegacyColored(particle, options, center, range, targetPlayers);
             return;
         }
 
-        if (particle == Particle.ITEM) {
+        if (particle == XParticle.ITEM.get()) {
             displayItem(particle, options, center, range, targetPlayers);
             return;
         }
 
-        if (particle == Particle.BLOCK || particle == Particle.FALLING_DUST) {
+        if (particle == XParticle.BLOCK.get() || particle == XParticle.FALLING_DUST.get()) {
             Material material = options.material;
             if (material == null || material.name().contains("AIR")) return;
             try {
@@ -38,19 +39,19 @@ public class ParticleDisplay_17 extends ParticleDisplay_13 {
             if (options.data == null) return;
         }
 
-        if (particle == Particle.DUST) {
+        if (particle == XParticle.DUST.get()) {
             // color is required
             if (options.color == null) options.color = Color.RED;
             options.data = new Particle.DustOptions(options.color, options.size);
         }
 
-        if (particle == Particle.DUST_COLOR_TRANSITION) {
+        if (particle == XParticle.DUST_COLOR_TRANSITION.get()) {
             if (options.color == null) options.color = Color.RED;
             if (options.toColor == null) options.toColor = options.color;
             options.data = new Particle.DustTransition(options.color, options.toColor, options.size);
         }
 
-        if (particle == Particle.VIBRATION) {
+        if (particle == XParticle.VIBRATION.get()) {
             if (options.target == null) return;
 
             Vibration.Destination destination;

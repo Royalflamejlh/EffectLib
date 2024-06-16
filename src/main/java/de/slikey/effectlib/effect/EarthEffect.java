@@ -3,6 +3,7 @@ package de.slikey.effectlib.effect;
 import java.util.Set;
 import java.util.HashSet;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -17,8 +18,8 @@ import de.slikey.effectlib.util.VectorUtils;
 
 public class EarthEffect extends Effect {
 
-    public Particle particleLand = Particle.HAPPY_VILLAGER;
-    public Particle particleOcean = Particle.DRIPPING_WATER;
+    public Particle particleLand = XParticle.HAPPY_VILLAGER.get();
+    public Particle particleOcean = XParticle.DRIPPING_WATER.get();
 
     public Color colorLand = null;
     public Color colorOcean = null;

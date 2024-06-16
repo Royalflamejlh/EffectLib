@@ -4,6 +4,7 @@ package de.slikey.effectlib.effect;
  * Idea by coco5843
  */
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -29,8 +30,8 @@ public class DiscoBallEffect extends Effect {
     /**
      * Particle of the sphere and of the lines
      */
-    public Particle sphereParticle = Particle.FLAME;
-    public Particle lineParticle = Particle.DUST;
+    public Particle sphereParticle = XParticle.FLAME.get();
+    public Particle lineParticle = XParticle.DUST.get();
 
     public Color sphereColor = null;
     public Color lineColor = null;

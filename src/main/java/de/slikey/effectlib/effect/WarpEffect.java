@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 
@@ -37,7 +38,7 @@ public class WarpEffect extends Effect {
     public WarpEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.FIREWORK;
+        particle = XParticle.FIREWORK.get();
         period = 2;
         iterations = rings;
     }

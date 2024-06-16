@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Particle;
 import org.bukkit.Location;
 import org.bukkit.util.Vector;
@@ -81,7 +82,7 @@ public class CircleEffect extends Effect {
     public CircleEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.HAPPY_VILLAGER;
+        particle = XParticle.HAPPY_VILLAGER.get();
         period = 2;
         iterations = 50;
     }

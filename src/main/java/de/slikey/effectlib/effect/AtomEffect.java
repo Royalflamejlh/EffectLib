@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -16,13 +17,13 @@ public class AtomEffect extends Effect {
     /**
      * ParticleType of the nucleus
      */
-    public Particle particleNucleus = Particle.DRIPPING_LAVA;
+    public Particle particleNucleus = XParticle.DRIPPING_LAVA.get();
     public Color colorNucleus = null;
 
     /**
      * ParticleType of orbitals
      */
-    public Particle particleOrbital = Particle.DRIPPING_WATER;
+    public Particle particleOrbital = XParticle.DRIPPING_WATER.get();
     public Color colorOrbital = null;
 
     /**

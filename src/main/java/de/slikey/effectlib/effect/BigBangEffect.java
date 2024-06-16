@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.XEntityType;
 import org.bukkit.Color;
 import org.bukkit.Sound;
 import org.bukkit.Location;
@@ -76,7 +77,7 @@ public class BigBangEffect extends Effect {
 
     protected void detonate(Location location, Vector v) {
         if (location != null && location.getWorld() != null) {
-            final Firework firework = (Firework) location.getWorld().spawnEntity(location.add(v), EntityType.FIREWORK_ROCKET);
+            final Firework firework = (Firework) location.getWorld().spawnEntity(location.add(v), XEntityType.FIREWORK_ROCKET.get());
             location.subtract(v);
             FireworkMeta meta = firework.getFireworkMeta();
             meta.setPower(0);

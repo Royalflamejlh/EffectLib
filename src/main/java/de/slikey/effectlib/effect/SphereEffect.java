@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Particle;
 import org.bukkit.Location;
 import org.bukkit.util.Vector;
@@ -37,7 +38,7 @@ public class SphereEffect extends Effect {
     public SphereEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.ENTITY_EFFECT;
+        particle = XParticle.ENTITY_EFFECT.get();
         iterations = 500;
         period = 1;
     }

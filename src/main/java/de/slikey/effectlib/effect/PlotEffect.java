@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.Arrays;
 import java.util.HashSet;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Particle;
 import org.bukkit.Location;
 
@@ -58,7 +59,7 @@ public class PlotEffect extends Effect {
     public PlotEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.DUST;
+        particle = XParticle.DUST.get();
         period = 1;
         iterations = 100;
     }

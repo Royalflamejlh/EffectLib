@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Sound;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -11,8 +12,8 @@ import de.slikey.effectlib.util.RandomUtils;
 
 public class ExplodeEffect extends Effect {
 
-    public Particle particle1 = Particle.POOF;
-    public Particle particle2 = Particle.EXPLOSION_EMITTER;
+    public Particle particle1 = XParticle.POOF.get();
+    public Particle particle2 = XParticle.EXPLOSION_EMITTER.get();
 
     /**
      * Amount of spawned smoke-sparks

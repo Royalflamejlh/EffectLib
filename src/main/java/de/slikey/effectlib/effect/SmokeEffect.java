@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 
@@ -18,7 +19,7 @@ public class SmokeEffect extends Effect {
     public SmokeEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.SMOKE;
+        particle = XParticle.SMOKE.get();
         period = 1;
         iterations = 300;
     }

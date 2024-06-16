@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.util.Vector;
@@ -54,7 +55,7 @@ public class FountainEffect extends Effect {
     public FountainEffect(EffectManager effectManager) {
         super(effectManager);
         type = EffectType.REPEATING;
-        particle = Particle.SPLASH;
+        particle = XParticle.SPLASH.get();
         period = 2;
         iterations = 100;
     }

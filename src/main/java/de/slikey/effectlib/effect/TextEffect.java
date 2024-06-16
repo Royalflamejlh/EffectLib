@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.util.Objects;
 import java.awt.image.BufferedImage;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.util.Vector;
@@ -74,7 +75,7 @@ public class TextEffect extends Effect {
         super(effectManager);
         font = new Font("Tahoma", Font.PLAIN, 16);
         type = EffectType.REPEATING;
-        particle = Particle.FIREWORK;
+        particle = XParticle.FIREWORK.get();
         period = 40;
         iterations = 20;
     }

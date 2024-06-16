@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -22,13 +23,13 @@ public class DnaEffect extends Effect {
     /**
      * Particle of base 1
      */
-    public Particle particleBase1 = Particle.FISHING;
+    public Particle particleBase1 = XParticle.FISHING.get();
     public Color colorBase1 = null;
 
     /**
      * Particle of base 2
      */
-    public Particle particleBase2 = Particle.DUST;
+    public Particle particleBase2 = XParticle.DUST.get();
     public Color colorBase2 = null;
 
     /**

@@ -1,5 +1,6 @@
 package de.slikey.effectlib.effect;
 
+import com.cryptomorin.xseries.particles.XParticle;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.util.Vector;
@@ -48,7 +49,7 @@ public class HeartEffect extends Effect {
 
     public HeartEffect(EffectManager effectManager) {
         super(effectManager);
-        particle = Particle.ENCHANTED_HIT;
+        particle = XParticle.ENCHANTED_HIT.get();
     }
 
     @Override
