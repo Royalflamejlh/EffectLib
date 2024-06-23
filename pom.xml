@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.elmakers.mine.bukkit</groupId>
 	<artifactId>EffectLib</artifactId>
-	<version>10.3-SNAPSHOT</version>
+	<version>10.4-SNAPSHOT</version>
 
 	<name>EffectLib</name>
 	<description>A library for Bukkit plugins to make complicated particle effects</description>
@@ -62,7 +62,7 @@
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.20.4-R0.1-SNAPSHOT</version>
+			<version>1.21-R0.1-SNAPSHOT</version>
 			<!-- for testing backwards-compat
 			<version>1.13-R0.1-SNAPSHOT</version>
 			<version>1.9-R0.1-SNAPSHOT</version>
@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>com.github.cryptomorin</groupId>
 			<artifactId>XSeries</artifactId>
-			<version>11.0.0</version>
+			<version>11.1.0</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
